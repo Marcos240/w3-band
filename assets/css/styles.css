@@ -119,9 +119,60 @@ html {
     margin-top: 25px;
 }
 
-
 #content {
 
+}
+
+#content .content-section {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 64px;
+}
+
+#content .section-heading {
+    margin-top: 64px;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 4px;
+    font-size: 30px;
+}
+
+#content .section-sub-heading {
+    text-align: center;
+    font-size: 15px;
+    margin-top: 25px;
+    font-style: italic;
+    opacity: 0.6;
+}
+
+#content .about-text {
+    font-size: 15px;
+    margin-top: 15px;
+    text-align: justify;
+    line-height: 1.4;
+}
+
+#content .members-list {
+    padding: 32px 0;
+    text-align: center;
+}
+
+#content .members-list .member-item {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 0 15px;
+}
+
+#content .members-list .member-name {
+    margin: 15px 0;
+    font-size: 15px;
+}
+
+#content .members-list .member-img {
+    margin: 15px 0;
+    width: 150px;
+    border-radius: 4px;
 }
 
 #footer {
