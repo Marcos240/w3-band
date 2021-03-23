@@ -4,12 +4,17 @@
     box-sizing: border-box;
 }
 html {
+    scroll-behavior: smooth;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Common */
 .white-text {
     color: #fff;
+}
+
+.text-center {
+    text-align: center;
 }
 
 .row::after {
@@ -47,6 +52,10 @@ html {
     margin-top: 16px !important;
 }
 
+.mt-32 {
+    margin-top: 32px;
+}
+
 .btn {
     color: #fff;
     background-color: #000;
@@ -60,6 +69,10 @@ html {
 .btn:hover {
     background-color: #ccc;
     color: #000;
+}
+
+.pull-right {
+    float:right;
 }
 /* Main */
 #main {
@@ -178,16 +191,15 @@ html {
 
 }
 
-#content .content-section {
+.content-section {
     width: 800px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 64px;
-    padding: 0 16px;
+    padding: 64px 0px 112px;
 }
 
 #content .section-heading {
-    padding-top: 64px;
+    padding-top: 10px;
     text-align: center;
     font-weight: 500;
     letter-spacing: 4px;
@@ -210,7 +222,6 @@ html {
 }
 
 #content .members-list {
-    padding: 32px 0;
     text-align: center;
 }
 
@@ -234,7 +245,6 @@ html {
 /* Tour Section */
 #content .tour-section {
     background-color: #000;
-    padding-bottom: 20px;
 }
 
 .tour-section .tickets-list {
@@ -266,11 +276,6 @@ html {
 }
 
 /* Place Section */
-.place-list {
-    margin-top: 32px;
-    margin-bottom: 48px;
-}
-
 .place-img {
     width: 100%;
     display: block;
@@ -302,18 +307,6 @@ html {
     padding: 15px 0px;
 }
 
-.buy-ticket {
-    color: #fff;
-    background-color: #000;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: inline-block;
-}
-
-.buy-ticket:hover {
-    color: #000;
-    background-color: #ccc;
-}
 
 /* Contact */
 .contact-content {
@@ -340,9 +333,24 @@ html {
     width: 100%;
 }
 
-.btn-submit {
-    float:right;
+/* Foooter */
+#footer .socials-list a {
+    text-decoration: none;
+    font-size: 20px;
+    padding: 0px 2px;
+    color: rgba(0, 0, 0, 0.6);
 }
-#footer {
 
+#footer .socials-list a:hover {
+    text-decoration: none;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+#footer .developer-about {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+#footer .developer-about a{
+    color: rgba(0, 0, 0, 0.6);
 }
