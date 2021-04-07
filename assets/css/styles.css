@@ -76,7 +76,7 @@ html {
 }
 /* Main */
 #main {
-
+    
 }
 
 #header {
@@ -148,9 +148,18 @@ html {
     font-size: 14px;
 }
 
+#header .mobile-menu,
 #header .search-btn {    
     float: right;
     padding: 0px 23px;
+}
+
+#header .mobile-menu:hover{
+    background-color: #ccc;
+}
+
+#header .mobile-menu:hover .menu-icon{
+    color: #000;
 }
 
 #header .search-btn:hover {
@@ -158,6 +167,7 @@ html {
     cursor: pointer;
 }
 
+#header .menu-icon,
 #header .search-icon {
     color: #fff;
     line-height: 46px;

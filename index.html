@@ -6,6 +6,7 @@
     <title>W3 Band</title>
     <link rel="stylesheet" href="./assets/css/styles.css">
     <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
 </head>
 <body>
     <div id="main">
@@ -17,7 +18,7 @@
                 <li><a href="#tour">Tour</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li>
-                    <a href="">
+                    <a href="#">
                         More
                         <i class="nav-arrow-down ti-angle-down"></i>
                     </a>
@@ -34,6 +35,10 @@
             <div class="search-btn">
                 <i class="search-icon ti-search">
                 </i>
+            </div>
+
+            <div id="mobile-menu" class="mobile-menu">
+                <i class="menu-icon ti-menu"></i>
             </div>
             <!-- End Search Header -->
         </div>
@@ -175,5 +180,41 @@
             <p class="developer-about text-center mt-16">Powered by <a href="https://www.w3schools.com/w3css/default.asp">w3.css</a></p>
         </div>
     </div>
+
+
+    <script>
+        // Đóng mở header
+        var header = document.getElementById('header');
+        var menuHeader = document.getElementById('mobile-menu');
+        var heightHeader = header.clientHeight;
+        menuHeader.onclick = function() {            
+            var isClosed = header.clientHeight === heightHeader;
+            if(isClosed){
+                header.style.height = 'auto';
+            }
+            else {
+                header.style.height = null;
+            }
+
+        // Tự động đóng menuHeader khi chọn
+        var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
+        for (let i = 0; i < menuItems.length; i++) {
+            var menuItem = menuItems[i];
+            console.log(menuItem.nextElementSibling);
+            menuItem.onclick = function() {
+                var isParentMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('subnav');
+                if(isParentMenu){
+                    event.defaultPrevented();
+                }
+                else{
+                    header.style.height = null;
+                }
+            }
+            
+        }
+
+            
+        }
+    </script>
 </body>
 </html>
