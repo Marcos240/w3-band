@@ -14,6 +14,14 @@
 
 /* Mobile */
 @media (max-width: 739px){
+    .s-full-width,
+    .s-col-full {
+        width: 100%!important;
+    }
+
+    .s-mt-8 {
+        margin-top: 8px;
+    }
 
     #header {        
         overflow: hidden;
@@ -28,6 +36,14 @@
         top: 0px;
         right: 0px;
     }    
+
+    #header li:first-child {
+        display: inline-block;
+    }
+
+    #header .subnav li:first-child {
+        display: block;
+    }
 
     #nav {
         display: block;
@@ -50,11 +66,16 @@
         color: #fff;
     }
 
-    #header li:first-child {
-        display: inline-block;
+    #content .members-list .member-img {
+        width: 80%;
     }
 
-    #header .subnav li:first-child {
-        display: block;
+    #content .members-list .member-name-first {
+        margin-top: 40px!important;
+    }
+
+
+    #content .members-list .member-name {
+        margin: 15px 0 0;
     }
 }
